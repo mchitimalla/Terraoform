@@ -1,1 +1,2 @@
-# Terraoform
+# Terraform
+terraform version

@@ -1,8 +1,10 @@
-data "aws_ami" "devopsprct"{
-
+data "aws_ami" "centosimage"{
+  owners = ["973714476881"]
+  most_recent = true
+  name_regex = "Centos-8-DevOps-Practice"
 }
 resource "aws_instance" "Frontend" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -10,7 +12,7 @@ resource "aws_instance" "Frontend" {
   }
 }
 resource "aws_instance" "Mongodb" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -18,7 +20,7 @@ resource "aws_instance" "Mongodb" {
   }
 }
 resource "aws_instance" "Catalogue" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -26,7 +28,7 @@ resource "aws_instance" "Catalogue" {
   }
 }
 resource "aws_instance" "Cart" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -34,7 +36,7 @@ resource "aws_instance" "Cart" {
   }
 }
 resource "aws_instance" "User" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -42,7 +44,7 @@ resource "aws_instance" "User" {
   }
 }
 resource "aws_instance" "MySql" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -50,7 +52,7 @@ resource "aws_instance" "MySql" {
   }
 }
 resource "aws_instance" "Redis" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -58,7 +60,7 @@ resource "aws_instance" "Redis" {
   }
 }
 resource "aws_instance" "RabbitMQ" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -66,7 +68,7 @@ resource "aws_instance" "RabbitMQ" {
   }
 }
 resource "aws_instance" "Payment" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -74,7 +76,7 @@ resource "aws_instance" "Payment" {
   }
 }
 resource "aws_instance" "Shipping" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -82,7 +84,7 @@ resource "aws_instance" "Shipping" {
   }
 }
 resource "aws_instance" "Dispatch" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
 
   tags = {

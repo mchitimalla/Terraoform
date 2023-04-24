@@ -6,3 +6,6 @@ resource "aws_instance" "web" {
     Name = "Demo"
   }
 }
+output "frontend"{
+  value=aws_instance.web.public_ip
+}

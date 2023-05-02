@@ -24,5 +24,5 @@ output "sample_dict_bool" {
   value = var.sample_dict["boolean"]
 }
 output "env" {
-  value = "Value of Env is${var.env}"
+  value = "Value of Env is ${var.env}"
 }

@@ -1,1 +1,2 @@
-env="development"
+env = "development"
+dynamic = "dynamic development"

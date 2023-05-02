@@ -7,6 +7,9 @@ output "sample_string" {
 output "sample_string1" {
   value = "Value of sample_string = ${var.sample_string}"
 }
+output "single_quote" {
+  value = var.sample_string1
+}
 
 ## Values from list
 # Second value in list

@@ -1,9 +1,7 @@
 variable "sample_string" {
   default = "Hello World"
 }
-variable "sample_string1" {
-  default ='Single quoted String'
-}
+
 variable "sample_number" {
   default = 100
 }

@@ -26,3 +26,6 @@ output "sample_dict_bool" {
 output "env" {
   value = "Value of Env is ${var.env}"
 }
+output "dynamic" {
+  value = var.dynamic
+}

@@ -29,3 +29,9 @@ output "env" {
 output "dynamic" {
   value = var.dynamic
 }
+output "automatic" {
+  value = var.automatic_value
+}
+output "terraVar" {
+  value = var.terraformvar
+}

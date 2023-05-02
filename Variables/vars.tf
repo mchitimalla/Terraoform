@@ -26,3 +26,5 @@ variable "sample_dict" {
 }
 variable "env" {}
 variable "dynamic" {}
+variable "automatic_value" {}
+variable "terraformvar" {}

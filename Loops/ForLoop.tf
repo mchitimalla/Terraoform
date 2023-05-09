@@ -33,9 +33,3 @@ resource "null_resource" "PrintList" {
     command = "echo ${each.key} - ${each.value}} "
   }
 }
-resource "null_resource" "PrintForFruits" {
-  for_each = var.Fruits
-  provisioner "local-exec" {
-    command = "echo ${each.key} "
-  }
-}

@@ -20,16 +20,4 @@ resource "null_resource" "PrintFruits1" {
     command = "echo ${each.key} - ${each.value["name"]},${each.value["count"]} "
   }
 }
-variable "List" {
-  default = {
-    pencils = 10
-    eraser  = 20
-    markers = 12
-  }
-}
-resource "null_resource" "PrintList" {
-  for_each = var.List
-  provisioner "local-exec" {
-    command = "echo ${each.key} - ${each.value}} "
-  }
-}
+

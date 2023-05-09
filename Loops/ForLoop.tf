@@ -21,9 +21,9 @@ resource "null_resource" "PrintFruits1" {
   }
 }
 variable "List" {
-  pencils=10
-  eraser=20
-  markers=12
+  pencils=10,
+  eraser=20,
+  markers=12,
 }
 resource "null_resource" "PrintList" {
   for_each = var.List

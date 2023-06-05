@@ -7,7 +7,6 @@ data "aws_security_group" "AllowAll"{
   name="MyRoboGroupAllowAll"
 }
 resource "aws_spot_instance_request" "instance" {
-  key_name = "Dummy"
   ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
   instance_interruption_behavior = "stop"

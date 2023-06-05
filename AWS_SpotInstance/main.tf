@@ -9,7 +9,7 @@ data "aws_security_group" "AllowAll"{
 resource "aws_spot_instance_request" "instance" {
   ami           = data.aws_ami.centosimage.image_id
   instance_type = "t3.micro"
-  instance_interruption_behaviour = "stop"
+  instance_interruption_behavior = "stop"
   vpc_security_group_ids = data.aws_security_group.AllowAll.id
   tags = {
     Name="spot Instance"

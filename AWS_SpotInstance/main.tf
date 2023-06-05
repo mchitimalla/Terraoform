@@ -15,3 +15,7 @@ resource "aws_spot_instance_request" "instance" {
     Name="spot Instance"
   }
 }
+
+output "Ip" {
+  value = aws_spot_instance_request.instance.private_ip
+}
